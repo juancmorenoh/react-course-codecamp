@@ -1,5 +1,7 @@
 import React from 'react'
 import Joke from "./Joke"
+import JokesData from './JokesData'
+import JokesDataPage from './JokesDataPage'
 
 function JokesPage() {
   const obj = {
@@ -30,7 +32,9 @@ function JokesPage() {
     }
   }
   return (
-    <div>
+    <>
+      <div>
+        <h2>Passed as props hardcoded</h2>
       <Joke 
         setUp = "Why don’t programmers like nature?"
         punchline = "It has too many bugs."
@@ -47,6 +51,12 @@ function JokesPage() {
         obj = {obj2}
       />
     </div>
+    <div>
+      <h2>Used a data.js for the jokes and use .map to loop tp pass props</h2>
+      <JokesDataPage></JokesDataPage>
+    </div>
+    </>
+    
   )
 }
 

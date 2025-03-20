@@ -1,14 +1,34 @@
 import React from 'react'
 import Header from "./Header"
 import Page from "./Page"
+import FujiImg from './../assets/fuji.jpg'
+import ParisImg from './../assets/paris.jpg'
+import RomeImg from './../assets/rome.jpg'
 
 function TravelPage() {
+  const fuji = {
+    img: { img: RomeImg, name: 'Fuji' },
+    country: 'Japan',
+    location: 'Monte Fuji'
+  };
+  
+  const paris = {
+    img: { img: ParisImg, name: 'Paris' },
+    country: 'France',
+    location: 'Tour Eiffel'
+  };
+  
+  const rome = {
+    img: { img: RomeImg, name: 'Rome' },
+    country: 'Italy',
+    location: 'Colosseo'
+  };
   return (
     <>
       <Header />
-      <Page img='../src/assets/fuji.jpg' name="fuji" country="japan" location="Monte Fuji"/>
-      <Page img='../src/assets/paris.jpg' name="paris" country="france" location="Tour Effiel"/>
-      <Page img='../src/assets/rome.jpg' name="rome" country="italy" location="Colosseo"/>
+      <Page obj= {fuji}/>
+      <Page obj= {paris}/>
+      <Page obj= {rome}/>
     </>
   )
 }

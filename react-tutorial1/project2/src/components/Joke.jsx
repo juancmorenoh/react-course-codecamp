@@ -21,6 +21,13 @@ function Joke(props) {
         <p>{props.punchline}</p>
       </div>
       ):("")}
+
+      <ul>
+        <li>{props.obj.upvotes}</li>
+        <li>{props.obj.downvotes}</li>
+        <li>{props.obj.comments.user1}</li>
+        <li>{props.obj.comments.user2}</li>
+      </ul>
       
     </div>
     </>

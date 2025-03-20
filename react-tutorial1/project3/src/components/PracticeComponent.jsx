@@ -1,5 +1,6 @@
 import {useState} from 'react'
 import CardEmployee from './CardEmployee'
+import Count from './Count'
 import './PracticeComponent.css'
 
 function PracticeComponent() {
@@ -35,31 +36,34 @@ function PracticeComponent() {
       lastName: "Doe",
       phone: "+1 (212) 555-1212",
       email: "itsmyrealname@example.com",
-      isFavorite: false
+      isFavourite: false
     },
     {
       firstName: "Jane",
       lastName: "Smith",
       phone: "+1 (212) 555-1234",
       email: "janesmith@example.com",
-      isFavorite: true
+      isFavourite: true
     }
   ]
 
   return (
     <>
       <div>
+        <h2>TOGGLE</h2>
         <p>Is useState Important?</p>
         <button className='answer' onClick={handleAnswer}>{answer? "Yes" : "No"}</button>
       </div>
+      <hr />
       <div>
-        <p>State counter</p>
-        <p>{count}</p>
+        <h2>COUNTER</h2>
+        <Count number={count}></Count>
         <button className='answer' onClick={handleRemove}>-</button>
         <button className='answer' onClick={handleAdd}>+</button>
       </div>
+      <hr />
       <div>
-        <h1>List</h1>
+        <h2>LIST</h2>
         <button onClick={addToDo}>Add Item</button>
         <ul>
           {thingsToDo.map((thing,index)=>{
@@ -67,6 +71,7 @@ function PracticeComponent() {
           })}
         </ul>
       </div>
+      <hr />
       <div>
         <h2>CARDS</h2>
           {employees.map((employee,index) =>{
@@ -76,8 +81,9 @@ function PracticeComponent() {
             </CardEmployee>
           })}
       </div>
-
+      <hr />
       <div>
+        <h1>DISPLAY</h1>
         <button onClick={toggleShow}>Press to { show ? "Hide" : "Show"}</button>
         { show ? <h1>show or no show?</h1> : null}
       </div>

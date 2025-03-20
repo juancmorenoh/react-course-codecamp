@@ -6,8 +6,8 @@ function App() {
 
   return (
     <>
-      <Header></Header>
-      <MainComponent></MainComponent>
+      {/* <Header></Header>
+      <MainComponent></MainComponent> */}
       <hr />
       <PracticeComponent></PracticeComponent>
     </>

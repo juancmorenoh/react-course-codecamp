@@ -1,9 +1,11 @@
 
 import { useState } from 'react'
 import './MainComponent.css'
-function Form() {
-  const [ingredients, setIngredients] = useState([])
+import RecipeCode from './RecipeCode.jsx'
 
+function MainComponent() {
+  const [ingredients, setIngredients] = useState([])
+  const [showRecipe, setShowRecipe] = useState(false)
 
   function addIngredient(formData){
     const newIngredient = formData.get('ingredient')
@@ -29,17 +31,34 @@ function Form() {
               name='ingredient' />
         <button>+ Add ingredient</button>
       </form>
-      <div className='list'>
-        <ul>
-          {ingredients.map((ingredient,index) =>{
-            return <li key={index}>{ingredient}</li>
-          })}
-        </ul>
+      <div className='main-content-recipe'>
+        {ingredients.length  > 0 ? (
+           <>
+            <h2>Ingredients on hand:</h2>
+            <div className='list'>
+              <ul>
+                {ingredients.map((ingredient,index) =>{
+                  return <li key={index}>{ingredient}</li>
+                })}
+              </ul>
+            </div>
+            {ingredients.length > 3 && 
+              <div className='link-receipe-container'>
+                <div className='left-cont'>
+                  <h5>Ready for a recipe?</h5>
+                  <p>Generate a recipe from your list of ingredients</p>
+                </div>
+                <button onClick={()=>setShowRecipe(!showRecipe)} className='recipe-btn'>Get Recipe</button>  
+              </div>}
+           </> 
+          ): null} 
       </div>
+      
+      {showRecipe &&  <RecipeCode></RecipeCode>}
       
     </main>
     
   )
 }
 
-export default Form
+export default MainComponent

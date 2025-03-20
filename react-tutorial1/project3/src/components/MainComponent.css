@@ -33,5 +33,53 @@ button{
 .list{
   display: flex;
   justify-content: center;
+  margin: 30px 0;
+  font-size: 20px;
+}
+
+.main-content-recipe{
+  margin-left: 30px;
+  margin-right: 30px;
   
+}
+
+.main-content-recipe h2{
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+.link-receipe-container{
+  display: flex;
+  width: 100%;
+  
+  padding: 30px;
+  background-color: rgb(219, 212, 202);
+  border-radius: 15px;
+}
+.link-receipe-container h5{
+  font-size: 20px;
+}
+
+.left-cont{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  flex-grow: 1;
+  margin-right: 20px;
+}
+
+.recipe-btn{
+  padding: 10px 20px;
+  background-color: rgb(231, 158, 0);
+  color: white;
+  border-radius: 7px;
+  font-family:Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  align-self: center;
+}
+
+.section-recipe{
+  width: 80%;
+  margin: 0 auto;
+  padding: 30px;
 }

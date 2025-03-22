@@ -1,0 +1,17 @@
+header{
+  display: flex;
+  background-color: rgb(238, 75, 224);
+  color: white;
+  align-items: center;
+  padding: 20px;
+}
+
+
+.header-img-container{
+  width: 80px;
+  margin-right: 20px;
+}
+
+img{
+  width: 100%;
+}

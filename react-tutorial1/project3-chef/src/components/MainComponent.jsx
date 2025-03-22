@@ -2,10 +2,12 @@
 import { useState } from 'react'
 import './MainComponent.css'
 import RecipeCode from './RecipeCode.jsx'
+import RecipeList from './RecipeList.jsx'
+import { getRecipeFromMistral } from '../../api.js';
 
 function MainComponent() {
   const [ingredients, setIngredients] = useState([])
-  const [showRecipe, setShowRecipe] = useState(false)
+  const [recipe, setRecipe] = useState("")
 
   function addIngredient(formData){
     const newIngredient = formData.get('ingredient')
@@ -19,6 +21,10 @@ function MainComponent() {
     e.target.style.backgroundColor = 'white'
   }
   
+  async function getRecipe(){
+    const recipeMarkdown = await getRecipeFromMistral(ingredients) 
+    setRecipe(recipeMarkdown)
+  }
 
   return (
     <main>
@@ -33,28 +39,11 @@ function MainComponent() {
       </form>
       <div className='main-content-recipe'>
         {ingredients.length  > 0 ? (
-           <>
-            <h2>Ingredients on hand:</h2>
-            <div className='list'>
-              <ul>
-                {ingredients.map((ingredient,index) =>{
-                  return <li key={index}>{ingredient}</li>
-                })}
-              </ul>
-            </div>
-            {ingredients.length > 3 && 
-              <div className='link-receipe-container'>
-                <div className='left-cont'>
-                  <h5>Ready for a recipe?</h5>
-                  <p>Generate a recipe from your list of ingredients</p>
-                </div>
-                <button onClick={()=>setShowRecipe(!showRecipe)} className='recipe-btn'>Get Recipe</button>  
-              </div>}
-           </> 
+           <RecipeList ingredients={ingredients} getRecipe={getRecipe}></RecipeList> 
           ): null} 
       </div>
       
-      {showRecipe &&  <RecipeCode></RecipeCode>}
+      {recipe &&  <RecipeCode recipe={recipe}></RecipeCode>}
       
     </main>
     

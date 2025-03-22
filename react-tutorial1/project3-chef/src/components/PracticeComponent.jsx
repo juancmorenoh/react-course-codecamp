@@ -2,13 +2,16 @@ import {useState} from 'react'
 import CardEmployee from './CardEmployee'
 import Count from './Count'
 import './PracticeComponent.css'
+import padsData from './../../pads.js'
+import Pad from './Pad.jsx'
 
-function PracticeComponent() {
+function PracticeComponent(props) {
   const [answer , setAnswer] = useState(true)
   const [count,setCount] = useState(0) 
   const [thingsToDo,setthingsToDo] = useState([])
   const [show, setShow] = useState(false)
   const [messages, setMessages] = useState(['a','b'])
+
 
   function toggleShow(){
     setShow(!show)
@@ -28,6 +31,21 @@ function PracticeComponent() {
     setCount(prevCount => prevCount - 1)
   }
 
+  const background = {
+    backgroundColor: props.darkMode? "black" : "white"
+  }
+
+  // pads
+  const [pads,setPads] = useState(padsData)
+
+  function toggle(id){
+    setPads(prevPads => prevPads.map(pad =>(
+      pad.id === id 
+      ? {...pad, on : !pad.on} 
+      : pad
+    )))
+     
+  }
 
   //CARD
   const employees =[
@@ -91,6 +109,17 @@ function PracticeComponent() {
       <div>
         {messages.length === 0 ? <p>You are all caught up!</p>: <p>You have {messages.length} message</p>}
         
+      </div>
+        <hr />
+      <div >
+        <h1>PAD BUTTONS</h1>
+        {pads.map((pad)=>
+          <Pad key={pad.id} id={pad.id} color={pad.color} on={pad.on} toggle={toggle}></Pad>
+        )}
+      </div>
+
+      <div style={background}>
+        <h1>DARK MODE</h1>
       </div>
     </>
   )

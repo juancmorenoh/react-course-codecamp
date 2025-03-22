@@ -1,0 +1,93 @@
+main{
+  width: 80%;
+  margin: 0 auto;
+  max-width: 500px;
+}
+
+.forms-container{
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0 0 0;
+  background-color: white;
+  border-radius: 10px;
+  
+}
+
+form{
+  flex: 1;
+}
+
+.form-right{
+  margin-left: 20px;
+}
+
+label{  
+  display: block;
+  font-weight: 600;
+  letter-spacing: 1.1px;
+}
+
+input{
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin: 5px 0;
+  width: 100%;
+}
+
+.btn-container button{
+  width: 100%;
+  height: 40px;
+  background-color: rgb(238, 75, 224);
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+.btn-container button img{
+  width: 25px;
+}
+.btn-container button p{
+  font-size: 16px;
+  letter-spacing: 1.2px;
+}
+.btn-container button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.meme{
+  position: relative;
+  margin-top: 20px;
+  width: 100%;
+  text-transform: uppercase;
+  color: white;
+  font-size: 40px;
+}
+
+.meme span{
+  width: 100%;
+  text-align: center;
+  text-shadow: 
+    2px 2px 0px black,  /* Horizontal and vertical shadows */
+    -2px -2px 0px black,
+    2px -2px 0px black,
+    -2px 2px 0px black; /* Create the "border" effect */
+}
+
+.top{
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.bottom{
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}

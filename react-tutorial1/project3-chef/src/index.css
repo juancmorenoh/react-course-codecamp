@@ -1,0 +1,35 @@
+/* Simple Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: sans-serif;
+  background: #fff;
+  color: #000;
+}
+
+.suggested-recipe-container {
+  width: 80%;
+  margin: 30px auto;
+  color: #475467;
+  line-height: 28px;
+  font-size: 1.125rem;
+  font-weight: 400;
+}
+
+.suggested-recipe-container h4{
+  margin-bottom: 5px;
+}
+
+.suggested-recipe-container h3{
+  margin: 18px 0;
+}
+
+
+.suggested-recipe-container ul li, .suggested-recipe-container ol li {
+  margin-bottom: 8px;
+}

@@ -43,6 +43,6 @@ This project was built while following the [Scrimba Learn React Course](https://
 
 - **Description**: This is a themed version of the Hangman game where players guess the secret word.
 
-##📝 Notes
+## 📝 Notes
 
 This project was developed for learning purposes while following Scrimba's curriculum. In addition to the course material, I also made some personal adjustments and experiments to reinforce my learning.

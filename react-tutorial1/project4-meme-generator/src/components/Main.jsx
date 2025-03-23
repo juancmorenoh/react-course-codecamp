@@ -1,6 +1,6 @@
 import {useState, useEffect} from 'react'
 import './Main.css'
-import canvas from './../assets/canvas.png';
+import canvas from '../assets/canvas.png';
 
 function Main() {
   const [memeList, setMemeList] = useState([])

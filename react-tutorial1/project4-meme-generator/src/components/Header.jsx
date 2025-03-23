@@ -1,5 +1,5 @@
 import React from 'react'
-import meme from './../assets/meme.png';
+import meme from '../assets/meme.png';
 import './Header.css'
 
 function Header() {

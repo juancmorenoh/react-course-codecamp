@@ -1,9 +1,7 @@
 import React from 'react'
 
 function RecipeList(props) {
-  // getRecipeFromMistral
-  //api state should live here 
-  //when get recipe click, it generates it, and pass it to c
+  
   return (
     <>
       <h2>Ingredients on hand:</h2>
@@ -16,7 +14,7 @@ function RecipeList(props) {
       </div>
       {props.ingredients.length > 3 && 
         <div className='link-receipe-container'>
-          <div className='left-cont'>
+          <div className='left-cont' ref={props.recipeSection}>
             <h5>Ready for a recipe?</h5>
             <p>Generate a recipe from your list of ingredients</p>
           </div>

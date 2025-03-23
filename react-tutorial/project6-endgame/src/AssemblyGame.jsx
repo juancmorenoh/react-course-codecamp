@@ -1,5 +1,5 @@
 import {useState} from 'react'
-import { languages } from './../languages.js';
+import { languages } from '../languages.js';
 import clsx from 'clsx';
 import { getFarewellText,getRandomWord } from '../utils.js';
 import { useWindowSize } from "@uidotdev/usehooks";

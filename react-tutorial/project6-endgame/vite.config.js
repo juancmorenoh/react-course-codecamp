@@ -5,5 +5,5 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   //Absolutly necessary to deply vite
-  base: "/react-course-codecamp/react-tutorial/project6-endgame"
+  base: '/react-course-codecamp/'
 })

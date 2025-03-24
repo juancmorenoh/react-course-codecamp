@@ -1,6 +1,9 @@
 # Scrimba - Learn React Course Project
 
 This project was built while following the [Scrimba Learn React Course](https://scrimba.com/learn/learnreact) and the corresponding [GitHub repository](https://github.com/scrimba/learn-react/tree/main). It contains exercises and projects designed to teach core React concepts step-by-step.
+## Live 
+
+You will be able to view and play the endgame created as a final project of this course: https://juancmorenoh.github.io/react-course-codecamp/
 
 ## 🚀 Features Implemented
 
